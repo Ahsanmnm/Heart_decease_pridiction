@@ -1,6 +1,7 @@
 # Heart Disease Prediction Web Application
 
 ![Web App Screenshot](WebApp.jpg)
+<img src="WebApp.jpg"  width="800" height="600">
 
 ## Overview
 
