@@ -4,7 +4,7 @@
 
 ## Overview
 
-This project involves the development of a web application that predicts the likelihood of heart disease based on user-provided patient details. The application utilizes a machine learning model trained on a Kaggle dataset. The model was evaluated using the Random Forest and K-Nearest Neighbors (KNN) algorithms. The KNN algorithm was chosen as the final model for the web application.
+In this machine learning project, I have collected the dataset from Kaggle ([Heart Disease UCI Dataset](https://www.kaggle.com/ronitf/heart-disease-uci)) and I will be using Machine Learning to predict whether any person is suffering from heart disease.
 
 ## Web Application Interface
 
@@ -21,7 +21,7 @@ The project is organized as follows:
 - `index.html`: The HTML file containing the user interface for the web application.
 - `app.py`: The Flask web application script responsible for serving the HTML, handling form submissions, and making predictions using the trained model.
 - `model.pkl`: The serialized KNN model saved as a binary file.
-- `web_app_screenshot.png`: A screenshot of the web application's user interface.
+- `WebApp.jpg`: A screenshot of the web application's user interface.
 
 ## Usage
 
