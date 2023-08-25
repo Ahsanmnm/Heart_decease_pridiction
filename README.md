@@ -36,11 +36,17 @@ The project is organized as follows:
 ### Model Evaluation
 
 ![Random Forest Accuracy](RF.jpg)
+
+*Figure 1: Random Forest Accuracy*
+
+This image shows the accuracy achieved by the Random Forest algorithm during the model evaluation process. It demonstrates the model's performance on the heart disease prediction task.
+
 ![KNN Accuracy](knn.jpg)
 
-### Web Application
+*Figure 2: K-Nearest Neighbors (KNN) Accuracy*
 
-![Web App Screenshot](web_app_screenshot.png)
+This image presents the accuracy achieved by the K-Nearest Neighbors (KNN) algorithm, which was chosen as the final model for the web application. It showcases the model's effectiveness in predicting heart disease.
+
 
 ## Acknowledgments
 
