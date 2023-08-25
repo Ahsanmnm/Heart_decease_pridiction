@@ -1,6 +1,6 @@
 # Heart Disease Prediction Web Application
 
-![Web App Screenshot](Webapp.jpg)
+![Web App Screenshot](WebApp.jpg)
 
 ## Overview
 
