@@ -35,8 +35,8 @@ The project is organized as follows:
 
 ### Model Evaluation
 
-![Random Forest Accuracy](random_forest_accuracy.png)
-![KNN Accuracy](knn_accuracy.png)
+![Random Forest Accuracy](RF.jpg)
+![KNN Accuracy](knn.jpg)
 
 ### Web Application
 
