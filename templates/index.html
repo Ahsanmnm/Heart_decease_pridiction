@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction Form</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333; /* Dark background color */
+            color: #fff; /* Light text */
+            transition: background-color 0.3s, color 0.3s;
+            margin: 0;
+            padding: 0;
+            background-image: url('heart-background.png'); /* Set your heart image URL here */
+            background-size: contain;
+            background-repeat: no-repeat; /* Prevent image from repeating */
+            background-position: center; /* Center the background image */
+        }
+
+        /* Header styling */
+        header {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* Container styling */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Form styling */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            color: #fff; /* Light text for labels */
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: none; /* Remove borders */
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+            color: #fff; /* Light text for input */
+        }
+
+        button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Dark mode toggle */
+        label[for="dark-mode-toggle"] {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            color: #fff; /* Light text for the toggle label */
+        }
+
+        /* Result styling */
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            border-radius: 5px;
+            color: #fff; /* Light text for result */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Heart Disease Prediction</h1>
+        <label for="dark-mode-toggle"></label>
+        
+    </header>
+    <div class="container">
+        <form id="prediction-form">
+            <!-- Gender -->
+            <div class="form-group">
+                <label for="sex">Gender:</label>
+                <select id="sex" name="sex">
+                    <option value="0">Female</option>
+                    <option value="1">Male</option>
+                </select>
+            </div>
+            
+            <!-- Chest Pain Type -->
+            <div class="form-group">
+                <label for="cp">Chest Pain Type:</label>
+                <select id="cp" name="cp">
+                    <option value="0">Type 0</option>
+                    <option value="1">Type 1</option>
+                    <option value="2">Type 2</option>
+                    <option value="3">Type 3</option>
+                </select>
+            </div>
+            
+            <!-- Fasting Blood Sugar -->
+            <div class="form-group">
+                <label for="fbs">Fasting Blood Sugar:</label>
+                <select id="fbs" name="fbs">
+                    <option value="0">Lower than 120 mg/dL</option>
+                    <option value="1">Higher than 120 mg/dL</option>
+                </select>
+            </div>
+            
+            <!-- Resting ECG Results -->
+            <div class="form-group">
+                <label for="restecg">Resting ECG Results:</label>
+                <select id="restecg" name="restecg">
+                    <option value="0">Normal</option>
+                    <option value="1">Abnormality 1</option>
+                    <option value="2">Abnormality 2</option>
+                </select>
+            </div>
+            
+            <!-- Exercise-Induced Angina -->
+            <div class="form-group">
+                <label for="exang">Exercise-Induced Angina:</label>
+                <select id="exang" name="exang">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+            
+            <!-- Slope of Peak Exercise ST Segment -->
+            <div class="form-group">
+                <label for="slope">Slope of Peak Exercise ST Segment:</label>
+                <select id="slope" name="slope">
+                    <option value="0">Slope 0</option>
+                    <option value="1">Slope 1</option>
+                    <option value="2">Slope 2</option>
+                </select>
+            </div>
+            
+            <!-- Number of Major Vessels -->
+            <div class="form-group">
+                <label for="ca">Number of Major Vessels:</label>
+                <select id="ca" name="ca">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            
+            <!-- Thallium Stress Testing -->
+            <div class="form-group">
+                <label for="thal">Thallium Stress Testing:</label>
+                <select id="thal" name="thal">
+                    <option value="0">Type 0</option>
+                    <option value="1">Type 1</option>
+                    <option value="2">Type 2</option>
+                    <option value="3">Type 3</option>
+                </select>
+            </div>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <!-- Result Display -->
+        <div class="result" id="result">
+            <!-- The prediction result will be displayed here -->
+        </div>
+        
+    </div>
+
+    <script>
+        // JavaScript to toggle dark mode
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+            }
+        });
+
+        // JavaScript for form submission and result display
+        const predictionForm = document.getElementById('prediction-form');
+        const resultDiv = document.getElementById('result');
+
+        predictionForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            // Get form data
+            const formData = new FormData(predictionForm);
+
+            // Create an object to store the form data
+            const formDataObject = {};
+            formData.forEach((value, key) => {
+                formDataObject[key] = value;
+            });
+
+            // You can add your logic here to send the form data to the server
+            // and receive the prediction result
+            // For this example, we'll simulate a result
+            const predictionResult = "Predicted Result: You don't have any Heart Diseases ";
+            
+
+            // Display the result on the page
+            resultDiv.innerHTML = `<p>${predictionResult}</p>`;
+        });
+    </script>
+</body>
+</html>
