@@ -48,6 +48,4 @@ The project is organized as follows:
 - Scikit-learn (Machine learning library)
 - Flask (Web framework)
 
-## License
 
-This project is licensed under the [MIT License](LICENSE).
