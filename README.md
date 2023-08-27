@@ -1,7 +1,6 @@
 # Heart Disease Prediction Web Application
 
-
-<img src="WebApp.jpg"  width="800" height="600">
+![WebApp](WebApp.jpg)
 
 ## Overview
 
@@ -36,18 +35,17 @@ The project is organized as follows:
 
 ### Model Evaluation
 
-<img src="RF.jpg"  width="400" height="400">
+![Random Forest Accuracy](RF.jpg)
 
 *Figure 1: Random Forest Accuracy*
 
 This image shows the accuracy achieved by the Random Forest algorithm during the model evaluation process. It demonstrates the model's performance on the heart disease prediction task.
 
+![K-Nearest Neighbors (KNN) Accuracy](knn.jpg)
 
-<img src="knn.jpg"  width="400" height="400">
 *Figure 2: K-Nearest Neighbors (KNN) Accuracy*
 
 This image presents the accuracy achieved by the K-Nearest Neighbors (KNN) algorithm, which was chosen as the final model for the web application. It showcases the model's effectiveness in predicting heart disease.
-
 
 ## Acknowledgments
 
@@ -55,4 +53,61 @@ This image presents the accuracy achieved by the K-Nearest Neighbors (KNN) algor
 - Scikit-learn (Machine learning library)
 - Flask (Web framework)
 
+---
+
+### Explanation of Input Fields
+
+Here, we provide more detailed explanations for each input field, including where you can typically obtain this information:
+
+1. **Gender (Sex):**
+   - This field represents the gender of the individual.
+   - "Female" (Select if the individual is female)
+   - "Male" (Select if the individual is male)
+   - This information is collected during a patient's medical history intake at healthcare facilities.
+
+2. **Chest Pain Type (cp):**
+   - This field relates to the type of chest pain experienced by the individual.
+   - "Type 0" (Typical angina): Typically assessed during a medical evaluation.
+   - "Type 1" (Atypical angina): Typically assessed during a medical evaluation.
+   - "Type 2" (Non-anginal pain): Typically assessed during a medical evaluation.
+   - "Type 3" (Asymptomatic): Typically assessed during a medical evaluation.
+
+3. **Fasting Blood Sugar (fbs):**
+   - This field indicates the fasting blood sugar level of the individual.
+   - "Lower than 120 mg/dL" (Normal fasting blood sugar): Determined through blood tests in healthcare settings.
+   - "Higher than 120 mg/dL" (Elevated fasting blood sugar): Determined through blood tests in healthcare settings.
+
+4. **Resting ECG Results (restecg):**
+   - This field represents the resting electrocardiographic results.
+   - "Normal" (A normal resting ECG): Obtained through an electrocardiogram test conducted at healthcare facilities.
+   - "Abnormality 1" (An abnormal resting ECG result): Obtained through an electrocardiogram test conducted at healthcare facilities.
+   - "Abnormality 2" (Another type of abnormal resting ECG result): Obtained through an electrocardiogram test conducted at healthcare facilities.
+
+5. **Exercise-Induced Angina (exang):**
+   - This field indicates whether the individual experiences exercise-induced angina (chest pain).
+   - "No" (No chest pain during exercise): Assessed during a stress test conducted at healthcare facilities.
+   - "Yes" (Experiences chest pain during exercise): Assessed during a stress test conducted at healthcare facilities.
+
+6. **Slope of Peak Exercise ST Segment (slope):**
+   - This field relates to the slope of the peak exercise ST segment on an electrocardiogram during exercise.
+   - "Slope 0" (A specific type of slope): Assessed during exercise stress tests conducted at healthcare facilities.
+   - "Slope 1" (Another type of slope): Assessed during exercise stress tests conducted at healthcare facilities.
+   - "Slope 2" (Yet another type of slope): Assessed during exercise stress tests conducted at healthcare facilities.
+
+7. **Number of Major Vessels (ca):**
+   - This field represents the number of major blood vessels colored by fluoroscopy.
+   - "0" (No major vessels colored): Determined through medical imaging tests such as angiography.
+   - "1" (One major vessel colored): Determined through medical imaging tests such as angiography.
+   - "2" (Two major vessels colored): Determined through medical imaging tests such as angiography.
+   - "3" (Three major vessels colored): Determined through medical imaging tests such as angiography.
+
+8. **Thallium Stress Testing (thal):**
+   - This field relates to the thallium stress testing, a nuclear medicine scan.
+   - "Type 0" (No thallium stress test): Indicates the absence of this specific test.
+   - "Type 1" (A normal thallium stress test result): Indicates a normal result from the thallium stress test.
+   - "Type 2" (A result indicating a fixed defect): Indicates a specific result from the thallium stress test.
+   - "Type 3" (A result indicating a reversible defect): Indicates a specific result from the thallium stress test.
+   - Thallium stress testing is conducted at specialized cardiac centers and healthcare facilities.
+
+These detailed explanations clarify the significance of each input type in assessing heart health and diagnosing potential heart disease.
 
